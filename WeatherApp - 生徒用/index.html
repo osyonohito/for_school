@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http_equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <title>Weather</title>
+</head>
+
+<body>
+  <div id="header">
+    <img id="reload_icon" width="32" height="32" src="./static/img/reload-icon.png">
+    <h1 id="location_name">?</h1>
+    <canvas id="weather_icon" width="128" height="128">?</canvas>
+
+  </div>
+
+  <div id="temperature">
+    <div id="now_temperature">
+      <h2 id="now_temperature_degree">?</h2>
+      <p id="now_temperature_unit">℃</p>
+    </div>
+
+    <div id="min_max_temperature">
+      <div id="max_temperature">
+        <p id="max_temperature_label">最高</p>
+        <p id="max_temperature_degree">?</p>
+        <p id="max_temperature_unit">℃</p>
+      </div>
+      <div id="min_temperature">
+        <p id="min_temperature_label">最低</p>
+        <p id="min_temperature_degree">?</p>
+        <p id="min_temperature_unit">℃</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="description">
+    <h2 id="weather_description">?</h2>
+  </div>
+
+  <div id="property">
+    <table id="weather_property">
+      <tr id="table_top">
+        <th id="label_humidity" class="property_name">湿度</th>
+        <td class="property_value">
+          <p id="data_humidity" class="value">?</p>
+          <p class="unit">%</p>
+        </td>
+      </tr>
+      <tr>
+        <th id="label_pressure" class="property_name">気圧</th>
+        <td class="property_value">
+          <p id="data_pressure" class="value">?</p>
+          <p class="unit">hpa</p>
+        </td>
+      </tr>
+      <tr>
+        <th id="label_rainfall_snowfall" class="property_name">降水量</th>
+        <td class="property_value">
+          <p id="data_rainfall_snowfall" class="value">?</p>
+          <p class="unit">mm/h</p>
+        </td>
+      </tr>
+      <tr>
+        <th id="label_wind" class="property_name">風速</th>
+        <td class="property_value">
+          <p id="data_wind" class="value">?</p>
+          <p class="unit">m/s</p>
+        </td>
+      </tr>
+      <tr>
+        <th id="label_cloudy" class="property_name">雲</th>
+        <td class="property_value">
+          <p id="data_cloudy" class="value">?</p>
+          <p class="unit">%</p>
+        </td>
+      </tr>
+      <tr id="table_bottom">
+        <th id="label_sunrise_sunset" class="property_name">日の出入</th>
+        <td class="property_value">
+          <p id="data_sunrise_sunset" class="value">?</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!--スクリプト-->
+  <script type="text/javascript" src="./static/js/app.js"></script>
+  <script type="text/javascript" src="./static/js/skycons.js"></script>
+  <script type="text/javascript" src="./static/js/app.js"></script>
+</body>
+
+</html>
