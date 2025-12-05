@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栄養計算</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h1>Automatic Caluculation Nutrition</h1>
+
+    <br>
+    <!-- ================================================== -->
+     <!-- "カロリー", "炭水化物", "タンパク質","脂質", "ミネラル", "ビタミン" -->
+    <!-- 主食選択 -->
+    <label class="selectbox-5" for="shushoku">
+        <select id="shushoku">
+            <option value="0, 0, 0, 0, 0, 0">主食：選択してください</option>
+            <option value="200.0, 51.9, 17.1, 3.0, 0.3, 0.05">ごはん</option>
+            <option value="158, 28.0, 5.0, 2.0, 35.3, 0.08">パン</option>
+            <option value="270, 53.0, 7.0, 1.0, 50, 0.05">うどん</option>
+            <option value="450, 85.0, 15.0, 5.0, 20, 0.1">ラーメン</option> 
+            <option value="120, 20.0, 8.0, 1.0, 10, 0.01">オートミール</option>
+        </select>
+    </label>
+    <!-- 主菜選択 -->
+    <label class="selectbox-5" for="shusai">
+        <select id="shusai">
+            <option value="0, 0, 0, 0, 0, 0">主菜：選択してください</option>
+            <option value="180, 0, 22, 10, 50, 2.0">焼き魚</option>
+            <option value="250, 10, 18, 20, 60, 0.3">ハンバーグ</option>
+            <option value="220, 2.0, 13.0, 18, 50, 2">オムレツ</option>
+            <option value="380, 5.0, 15.0, 30.0, 10, 0.1">豚カツ</option> 
+        <option value="150, 5.0, 8.0, 8.0, 50, 1.0">厚揚げの煮物</option>
+        </select>
+    </label>
+    <!-- 副菜選択 -->
+    <label class="selectbox-5" for="fukusai">
+        <select id="fukusai">
+            <option value="0, 0, 0, 0, 0, 0">副菜：選択してください</option>
+            <option value="30, 7, 1.5, 0, 50, 20">サラダ</option>
+            <option value="40, 7, 3, 0.5, 60, 2">ほうれんそうのおひたし</option>
+            <option value="100, 15, 5, 2, 250, 1.5">ひじきの煮物</option>
+            <option value="20, 5, 0.5, 0, 10, 5">きゅうりの浅漬け</option> 
+            <option value="120, 20, 6, 1, 300, 5">筑前煮</option>
+        </select>
+    </label>
+
+    <!-- ================================================== -->
+    
+    <br>
+    <div class="flex-container">
+        
+        <!-- 計算ボタン -->
+        <button class="btn" onclick="calculate()">結果を表示</button>
+        <br>
+
+        <!-- 結果表示 -->
+        <div id="resultSection">
+            <h3>結果</h3>
+            <p id="resultCalories">合計カロリー: </p>
+            <p id="resultCarbs">炭水化物: </p>
+            <p id="resultProtein">タンパク質: </p>
+            <p id="resultFat">脂質: </p>
+            <p id="resultMinerals">ミネラル: </p>
+            <p id="resultVitamins">ビタミン: </p>
+        </div>
+
+        <div class="balloon-container">
+            <div id="adviceBalloon" class="balloon-005">
+                健康的な食事を心がけて、わしのように長生きするのじゃぞ！
+            </div>
+            <img src="static/image/仙人.jpg">
+            
+        </div>
+        
+    </div>
+
+    <p class="copyRight"><small>©2025 東成瀬村</small></p>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
